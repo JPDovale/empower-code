@@ -1,10 +1,22 @@
-import { ComponentProps } from 'react'
-import { LinkContainer } from './styles'
+import { VariantProps } from 'class-variance-authority'
+import { linkStyles } from './styles'
+import NextLink from 'next/link'
+import { AnchorHTMLAttributes } from 'react'
 
-interface ILinkProps extends ComponentProps<typeof LinkContainer> {
-  onPage: string
+interface ILinkProps
+  extends AnchorHTMLAttributes<HTMLAnchorElement>,
+    VariantProps<typeof linkStyles> {
+  onPage: string | null
+  href: string
 }
 
 export function Link({ onPage, ...props }: ILinkProps) {
-  return <LinkContainer {...props} active={props.href === onPage} />
+  return (
+    <NextLink
+      className={linkStyles({
+        active: onPage === props.href,
+      })}
+      {...props}
+    />
+  )
 }

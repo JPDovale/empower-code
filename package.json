@@ -6,14 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.9",
-    "@stitches/react": "^1.2.8",
+    "@prismicio/client": "^7.0.1",
+    "@prismicio/next": "^1.2.1",
+    "@prismicio/react": "^2.6.2",
+    "@radix-ui/react-avatar": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
     "@types/node": "20.2.3",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "axios": "^1.4.0",
+    "class-variance-authority": "^0.6.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "next": "13.4.3",
@@ -22,6 +29,11 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@rocketseat/eslint-config": "^1.2.0"
+    "@rocketseat/eslint-config": "^1.2.0",
+    "@slicemachine/adapter-next": "^0.2.1",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "slice-machine-ui": "^1.1.1",
+    "tailwindcss": "^3.3.2"
   }
 }

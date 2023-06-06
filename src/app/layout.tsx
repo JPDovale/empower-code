@@ -1,6 +1,7 @@
 import React from 'react'
 import { Roboto, Bungee } from 'next/font/google'
-import Head from './head'
+import '../globals.css'
+import { Header } from '@/components/Header'
 
 export const metadata = {
   title: 'Empower code',
@@ -31,8 +32,11 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${robotoFont.variable} ${bungeeFont.variable}`}
     >
-      <Head />
-      <body>{children}</body>
+      <body>
+        <Header />
+
+        {children}
+      </body>
     </html>
   )
 }

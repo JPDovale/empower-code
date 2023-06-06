@@ -1,48 +1,43 @@
-import { styled } from '@/styles'
+import { cva } from 'class-variance-authority'
 
-export const TextContainer = styled('p', {
+export const textStyles = cva([], {
   variants: {
     fontSize: {
-      '2xs': {
-        fontSize: '0.25rem',
-      },
-      xs: {
-        fontSize: '0.5rem',
-      },
-      sm: {
-        fontSize: '0.75rem',
-      },
-      md: {
-        fontSize: '1rem',
-      },
-      lg: {
-        fontSize: '1.25rem',
-      },
-      xl: {
-        fontSize: '1.5rem',
-      },
-      '2xl': {
-        fontSize: '1.75rem',
-      },
-      '3xl': {
-        fontSize: '2rem',
-      },
-      '4xl': {
-        fontSize: '2.5rem',
-      },
+      '2xs': ['text-3xs'],
+      xs: ['text-xxs'],
+      sm: ['text-xs'],
+      md: ['text-base'],
+      lg: ['text-xl'],
+      xl: ['text-2xl'],
+      '2xl': ['text-3xl'],
+      '3xl': ['text-4xl'],
     },
     fontFamily: {
-      bodyText: {
-        fontFamily: '$body',
-      },
-      titleText: {
-        fontFamily: '$title',
-      },
+      bodyText: ['font-body'],
+      titleText: ['font-title'],
     },
   },
 
   defaultVariants: {
-    fontSize: 'md',
     fontFamily: 'bodyText',
+    fontSize: 'md',
   },
 })
+
+// export const TextContainer = styled('p', {
+//   variants: {
+//     fontFamily: {
+//       bodyText: {
+//         fontFamily: '$body',
+//       },
+//       titleText: {
+//         fontFamily: '$title',
+//       },
+//     },
+//   },
+
+//   defaultVariants: {
+//     fontSize: 'md',
+//     fontFamily: 'bodyText',
+//   },
+// })

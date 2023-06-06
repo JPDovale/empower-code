@@ -1,7 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import { Link } from '../Link'
-import { NavigationContainer } from './styles'
+import { navigationContainerStyles } from './styles'
 
 interface ILink {
   href: string
@@ -16,12 +16,12 @@ export function Navigation({ links = [] }: INavigationProps) {
   const pathname = usePathname()
 
   return (
-    <NavigationContainer>
+    <nav className={navigationContainerStyles()}>
       {links.map((link) => (
         <Link key={link.href} href={link.href} onPage={pathname}>
           {link.text}
         </Link>
       ))}
-    </NavigationContainer>
+    </nav>
   )
 }

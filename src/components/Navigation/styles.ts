@@ -1,6 +1,3 @@
-import { styled } from '@/styles'
+import { cva } from 'class-variance-authority'
 
-export const NavigationContainer = styled('nav', {
-  display: 'flex',
-  gap: '1rem',
-})
+export const navigationContainerStyles = cva(['flex', 'gap-4'])

@@ -1,0 +1,38 @@
+@config "../tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@layer base {
+  body {
+    @apply bg-gray900 text-white font-body
+  }
+
+  a, button {
+    all: unset;
+    @apply cursor-pointer
+  } 
+
+  .htmlContent {
+    @apply w-full max-w-screen-lg mx-auto my-4 p-4
+  }
+
+  .htmlContent p {
+    @apply leading-7 mb-5 text-justify
+  }
+
+  .htmlContent h2 {
+    @apply font-title text-3xl
+  }
+}
+
+
