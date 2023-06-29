@@ -1,10 +1,6 @@
 'use client'
 import * as Button from '@/components/Button'
-import {
-  GitHubLogoIcon,
-  LinkedinLogoIcon,
-  YouTubeLogoIcon,
-} from '@/config/Icons'
+import { GithubLogo, LinkedinLogo, YoutubeLogo } from '@/config/Icons'
 import { socialButtonsContainerStyles } from './styles'
 import { useRouter } from 'next/navigation'
 
@@ -28,7 +24,7 @@ export function SocialButtons({
         onClick={() => router.push(linkedinUrl)}
       >
         <Button.Icon>
-          <LinkedinLogoIcon size={24} />
+          <LinkedinLogo size={24} />
         </Button.Icon>
 
         <Button.Text asChild>
@@ -38,7 +34,7 @@ export function SocialButtons({
 
       <Button.Root hoverColor="youtube" onClick={() => router.push(youtubeUrl)}>
         <Button.Icon>
-          <YouTubeLogoIcon size={24} />
+          <YoutubeLogo size={24} />
         </Button.Icon>
 
         <Button.Text asChild>
@@ -48,7 +44,7 @@ export function SocialButtons({
 
       <Button.Root hoverColor="github" onClick={() => router.push(githubUrl)}>
         <Button.Icon>
-          <GitHubLogoIcon size={24} />
+          <GithubLogo size={24} />
         </Button.Icon>
 
         <Button.Text asChild>

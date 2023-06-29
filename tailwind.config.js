@@ -32,6 +32,10 @@ module.exports = {
 
         red600: '#b2071d',
       },
+      backgroundImage: {
+        gradientButton:
+          'linear-gradient(90deg, rgba(226,226,226,0) 5%, rgba(42,42,43,1) 48%, rgba(42,42,43,1) 52%, rgba(18,7,32,0) 95%)',
+      },
       boxShadow: {
         defaultDown: '0 3px 3px #00000050',
       },
@@ -40,6 +44,15 @@ module.exports = {
       },
       lineHeight: {
         0: 0,
+      },
+      keyframes: {
+        'bg-fade-out': {
+          '0%': { backgroundColor: '#121214' },
+          '100%': { backgroundColor: '#12121400' },
+        },
+      },
+      animation: {
+        'bg-button-fade-out': 'ease-out bg-fade-out 250ms',
       },
     },
   },

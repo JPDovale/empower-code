@@ -8,7 +8,12 @@ interface IButtonRootProps
     VariantProps<typeof buttonStyles> {}
 
 function Root({ hoverColor, ...props }: IButtonRootProps) {
-  return <button className={buttonStyles({ hoverColor })} {...props} />
+  return (
+    <button
+      {...props}
+      className={`${buttonStyles({ hoverColor })} ${props.className}`}
+    />
+  )
 }
 
 Root.displayName = 'Button.Root'

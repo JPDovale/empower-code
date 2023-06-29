@@ -1,6 +1,6 @@
 'use client'
 import * as Button from '@/components/Button'
-import { GitHubLogoIcon } from '@/config/Icons'
+import { GithubLogo } from '@/config/Icons'
 import { useRouter } from 'next/navigation'
 
 export function GitHubButton() {
@@ -13,7 +13,7 @@ export function GitHubButton() {
     >
       <Button.Text>JPdovale</Button.Text>
       <Button.Icon>
-        <GitHubLogoIcon size={24} />
+        <GithubLogo size={24} />
       </Button.Icon>
     </Button.Root>
   )

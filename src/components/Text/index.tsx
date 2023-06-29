@@ -13,17 +13,17 @@ export function Text({
   asChild = false,
   fontFamily,
   fontSize,
-  ...rest
+  ...props
 }: ITextProps) {
   const TextComponent = asChild ? Slot : 'p'
 
   return (
     <TextComponent
-      className={textStyles({
+      {...props}
+      className={`${textStyles({
         fontFamily,
         fontSize,
-      })}
-      {...rest}
+      })} ${props.className}`}
     />
   )
 }
