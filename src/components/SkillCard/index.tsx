@@ -59,7 +59,7 @@ export function SkillCard({ skill }: ISkillCardProps) {
             width={80}
             height={80}
           />
-          
+
           <Text fontSize="lg" asChild>
             <span className={skillNameStyles()}>{skill.title}</span>
           </Text>
