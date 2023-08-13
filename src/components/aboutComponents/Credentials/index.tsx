@@ -62,7 +62,7 @@ export function Credentials() {
         </div>
 
         <div className={infoContainerStyles()}>
-          <span className={infoTitleStyles()}>Redes sócias</span>
+          <span className={infoTitleStyles()}>Redes sociais</span>
 
           <SocialButtons
             githubUrl={socialLinks.gitHubUrl}
