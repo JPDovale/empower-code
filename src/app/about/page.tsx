@@ -11,6 +11,7 @@ export default async function AboutPage() {
 
   return (
     <main className={aboutPageStyles()}>
+      {/* @ts-expect-error */}
       <Credentials />
 
       <article
